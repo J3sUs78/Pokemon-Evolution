@@ -1,0 +1,26 @@
+@use 'variables' as v; //este es mejor que @import ya que import se dejara de usar
+
+.btn{
+    background-color: v.$color1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 33px;
+    //& proporciona el nombre de la clase que se encuentra creado, en este caso represetna .button
+    &_box{
+        position: relative;
+    }
+    &_shadow{
+        width: 60px;
+        height: 60px;
+        background-color: v.$color2;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        z-index: -1;
+    }
+}
+
